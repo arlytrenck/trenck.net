@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>Arly Trenck | IT Systems Engineer & Infrastructure Architect</title>
+    <meta name="description" content="Arly Trenck is a Certified IT Systems Engineer and Infrastructure Architect with experience in multi-site infrastructure management, identity & access governance, and process automation.">
+    <meta name="author" content="Arly Trenck">
+    <meta name="robots" content="index, follow">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <link rel="canonical" href="https://trenck.net/">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    <meta name="theme-color" content="#020617">
+    <meta name="color-scheme" content="dark">
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Arly Trenck | IT Systems Engineer & Infrastructure Architect">
+    <meta property="og:description" content="Certified IT Systems Engineer with experience in multi-site infrastructure, identity governance, and process automation.">
+    <meta property="og:url" content="https://trenck.net">
+    <meta property="og:image" content="https://trenck.net/headshot.jpg">
+    <meta property="og:site_name" content="Arly Trenck">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Arly Trenck | IT Systems Engineer & Infrastructure Architect">
+    <meta name="twitter:description" content="Certified IT Systems Engineer with experience in multi-site infrastructure, identity governance, and process automation.">
+    <meta name="twitter:image" content="https://trenck.net/headshot.jpg">
+
+    <!-- Favicon (inline SVG, no external asset needed) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Crect%20width='24'%20height='24'%20rx='6'%20fill='%232563EB'/%3E%3Ctext%20x='3.6'%20y='17'%20font-family='monospace'%20font-weight='700'%20font-size='11.5'%20fill='white'%3E%3E_%3C/text%3E%3C/svg%3E">
+
+    <!-- Preload LCP image -->
+    <link rel="preload" as="image" href="/headshot.jpg" fetchpriority="high">
+
+    <!-- Fonts: Space Grotesk for headings, JetBrains Mono for eyebrows/nav/labels -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Self-hosted styles (Tailwind, prebuilt) and icons (Font Awesome, self-hosted) -->
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/fa/css/all.min.css">
+    <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body class="bg-slate-950 text-slate-200 font-sans antialiased">
+
+    <!-- Skip link for keyboard & screen reader users -->
+    <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:bg-brand-accent focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">Skip to main content</a>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="fixed top-0 w-full bg-slate-900/90 backdrop-blur-md border-b border-slate-800 z-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-20">
+                    <div class="flex items-center gap-3">
+                        <div class="bg-brand-accent p-2.5 rounded-lg text-white">
+                            <i class="fa-solid fa-terminal text-xl" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <span class="text-xl font-bold tracking-tight text-white block font-display">ARLY TRENCK</span>
+                            <span class="text-xs text-brand-light font-mono font-medium tracking-widest uppercase block -mt-1">Systems Engineer</span>
+                        </div>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-8 text-xs font-mono uppercase tracking-widest">
+                        <a href="#about" class="hover:text-brand-light transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-light focus-visible:outline-offset-4 rounded">About</a>
+                        <a href="#experience" class="hover:text-brand-light transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-light focus-visible:outline-offset-4 rounded">Experience</a>
+                        <a href="#skills" class="hover:text-brand-light transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-light focus-visible:outline-offset-4 rounded">Skills &amp; Stack</a>
+                        <a href="#certifications" class="hover:text-brand-light transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-light focus-visible:outline-offset-4 rounded">Certifications</a>
+                        <a href="#contact" class="bg-brand-accent hover:bg-blue-600 text-white px-5 py-2.5 rounded-lg font-semibold tracking-widest transition-colors shadow-lg shadow-blue-500/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Contact Me</a>
+                    </div>
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="md:hidden text-slate-400 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-light focus-visible:outline-offset-2 rounded text-2xl p-1" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu">
+                        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3 font-mono text-xs uppercase tracking-widest">
+                <a href="#about" class="block py-2 text-slate-300 hover:text-white">About</a>
+                <a href="#experience" class="block py-2 text-slate-300 hover:text-white">Experience</a>
+                <a href="#skills" class="block py-2 text-slate-300 hover:text-white">Skills &amp; Stack</a>
+                <a href="#certifications" class="block py-2 text-slate-300 hover:text-white">Certifications</a>
+                <a href="#contact" class="block bg-brand-accent text-center text-white py-2.5 rounded-lg font-semibold mt-4">Contact Me</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main">
+
+        <!-- Hero Section with Headshot -->
+        <section class="pt-32 pb-20 md:pt-40 md:pb-28 px-4 relative overflow-hidden">
+            <div class="absolute inset-0 grid-pattern [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,black,transparent)] -z-10" aria-hidden="true"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/20 via-slate-950 to-slate-950 -z-10" aria-hidden="true"></div>
+            <div class="max-w-7xl mx-auto">
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+
+                    <!-- Profile Headshot Frame -->
+                    <div class="lg:col-span-5 flex justify-center order-first lg:order-last">
+                        <div class="relative group">
+                            <!-- Subtle Ambient Glow Behind Card -->
+                            <div class="absolute -inset-1 bg-gradient-to-r from-brand-accent to-brand-light rounded-3xl blur-lg opacity-25 group-hover:opacity-40 transition-opacity duration-500" aria-hidden="true"></div>
+
+                            <!-- Clean Image Frame -->
+                            <div class="relative w-72 h-96 sm:w-80 sm:h-[28rem] rounded-2xl overflow-hidden border border-slate-700/80 bg-slate-900 shadow-2xl">
+                                <img src="headshot.jpg" alt="Arly Trenck, IT Systems Engineer" class="w-full h-full object-cover object-top transition-transform duration-500 transform group-hover:scale-105 motion-reduce:transform-none motion-reduce:transition-none" loading="eager" decoding="async" fetchpriority="high" width="320" height="448">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Text Content -->
+                    <div class="lg:col-span-7 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-brand-light text-xs font-mono font-semibold uppercase tracking-wider mb-6">
+                            <i class="fa-solid fa-circle-check" aria-hidden="true"></i> Certified IT Professional
+                        </div>
+                        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight mb-6 leading-tight">
+                            Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent via-brand-light to-cyan-400">Arly Trenck</span>
+                        </h1>
+                        <p class="text-lg md:text-xl text-slate-400 mb-8 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                            Certified IT Systems Engineer with 5+ years of experience managing multi-site infrastructure, automating operational processes, and managing enterprise networks and security.
+                        </p>
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                            <a href="#contact" class="w-full sm:w-auto bg-brand-accent hover:bg-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-colors shadow-lg shadow-blue-600/30 text-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-light">
+                                Get In Touch
+                            </a>
+                            <a href="https://www.linkedin.com/in/arlytrenck" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 px-8 py-4 rounded-xl font-semibold text-lg transition-colors flex items-center justify-center gap-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-light">
+                                <i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn Profile
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- About / Executive Summary -->
+        <section id="about" class="py-20 bg-slate-900/50 border-y border-slate-800/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="reveal">
+                        <h2 class="font-display text-3xl font-bold text-white mb-6">Professional Profile</h2>
+                        <p class="text-slate-300 mb-4 leading-relaxed">
+                            Proficient in enterprise administration, modern security standards, and workflow automation. Focused on building high-reliability environments and optimizing cross-functional operations.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 mt-8">
+                            <div class="border-l-2 border-brand-accent pl-4">
+                                <span class="block text-2xl font-display font-bold text-white">5+ Years</span>
+                                <span class="text-sm text-slate-400">Professional Experience</span>
+                            </div>
+                            <div class="border-l-2 border-brand-accent pl-4">
+                                <span class="block text-2xl font-display font-bold text-white">10</span>
+                                <span class="text-sm text-slate-400">Industry Certifications</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reveal bg-slate-900 p-8 rounded-2xl border border-slate-800 shadow-xl">
+                        <h3 class="text-xl font-semibold text-white mb-6 flex items-center gap-3">
+                            <i class="fa-solid fa-crosshairs text-brand-accent" aria-hidden="true"></i> Primary Focus Areas
+                        </h3>
+                        <ul class="space-y-4 text-slate-300">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-brand-light mt-1" aria-hidden="true"></i>
+                                <span>Server &amp; Network Systems Administration (Windows/Linux)</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-brand-light mt-1" aria-hidden="true"></i>
+                                <span>PowerShell &amp; Bash Scripting for Process Automation</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-brand-light mt-1" aria-hidden="true"></i>
+                                <span>Identity Management, Single Sign-On (SSO/MFA) &amp; Governance</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-brand-light mt-1" aria-hidden="true"></i>
+                                <span>MSP &amp; BPO Partner Relationship Operations</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-brand-light mt-1" aria-hidden="true"></i>
+                                <span>Business Continuity, Backup Systems &amp; Security Mitigation</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience / Current Role Highlights -->
+        <section id="experience" class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="font-display text-3xl font-bold text-white">Current Role Highlights</h2>
+                    <p class="text-slate-400 mt-2 max-w-2xl mx-auto">Key responsibilities and technical operations managed.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Highlight 1 -->
+                    <div class="reveal bg-slate-900/60 p-8 rounded-xl border border-slate-800">
+                        <div class="w-12 h-12 bg-blue-600/10 text-brand-accent rounded-lg flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-handshake" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-3">MSP &amp; BPO Partnership Operations</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Overseeing critical strategic relationships with external BPO and MSP partners, ensuring continuous service delivery and alignment with organizational goals.
+                        </p>
+                    </div>
+                    <!-- Highlight 2 -->
+                    <div class="reveal bg-slate-900/60 p-8 rounded-xl border border-slate-800">
+                        <div class="w-12 h-12 bg-blue-600/10 text-brand-accent rounded-lg flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-sitemap" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-3">Multi-Site Infrastructure</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Managing and optimizing server, security, and network infrastructure across multiple real estate regional offices throughout the Northeast.
+                        </p>
+                    </div>
+                    <!-- Highlight 3 -->
+                    <div class="reveal bg-slate-900/60 p-8 rounded-xl border border-slate-800">
+                        <div class="w-12 h-12 bg-blue-600/10 text-brand-accent rounded-lg flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-code" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-3">Automation &amp; Scripting</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Automating core processes, account lifecycle actions, asset controls, and monitoring workflows using custom PowerShell and Bash scripts.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Technology Stack -->
+        <section id="skills" class="py-20 bg-slate-900/40 border-y border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="font-display text-3xl font-bold text-white">Technical Toolkit</h2>
+                    <p class="text-slate-400 mt-2">Comprehensive summary of cloud services, operating systems, and management platforms.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Infrastructure & Endpoint Management -->
+                    <div class="reveal bg-slate-900 p-6 rounded-xl border border-slate-800">
+                        <h3 class="text-sm font-mono font-bold text-brand-light uppercase tracking-wider mb-4"><i class="fa-solid fa-server mr-2" aria-hidden="true"></i>Cloud &amp; Infrastructure</h3>
+                        <ul class="space-y-2 text-slate-300 text-sm">
+                            <li>Windows 10 / 11</li>
+                            <li>Windows Server 2019 / 2022</li>
+                            <li>Ubuntu Server 24.04 / 26.04 LTS</li>
+                            <li>macOS &amp; iOS/Android</li>
+                            <li>Synology DSM &amp; Hybrid Storage</li>
+                            <li>Microsoft Azure &amp; Proxmox VE</li>
+                        </ul>
+                    </div>
+
+                    <!-- Identity, Access & Governance -->
+                    <div class="reveal bg-slate-900 p-6 rounded-xl border border-slate-800">
+                        <h3 class="text-sm font-mono font-bold text-brand-light uppercase tracking-wider mb-4"><i class="fa-solid fa-id-card mr-2" aria-hidden="true"></i>Identity &amp; Zero Trust</h3>
+                        <ul class="space-y-2 text-slate-300 text-sm">
+                            <li>Microsoft Entra ID (Azure AD / Active Directory)</li>
+                            <li>Conditional Access &amp; MFA Governance</li>
+                            <li>Okta Workforce Identity &amp; SAML SSO</li>
+                            <li>Google Workspace Enterprise Admin</li>
+                            <li>RBAC &amp; Least Privilege Security</li>
+                        </ul>
+                    </div>
+
+                    <!-- Connectivity & Network Security -->
+                    <div class="reveal bg-slate-900 p-6 rounded-xl border border-slate-800">
+                        <h3 class="text-sm font-mono font-bold text-brand-light uppercase tracking-wider mb-4"><i class="fa-solid fa-shield-halved mr-2" aria-hidden="true"></i>Network Security &amp; Edge</h3>
+                        <ul class="space-y-2 text-slate-300 text-sm">
+                            <li>DNS / DHCP Infrastructure</li>
+                            <li>IPsec &amp; WireGuard VPN Networks</li>
+                            <li>SonicOS Next-Gen Firewalls</li>
+                            <li>RUCKUS Cloud Wireless</li>
+                            <li>Cisco Umbrella (DNS Security)</li>
+                            <li>SentinelOne EDR / XDR</li>
+                            <li>AUVIK &amp; Liongard Monitoring</li>
+                        </ul>
+                    </div>
+
+                    <!-- Modern Tooling & Automation -->
+                    <div class="reveal bg-slate-900 p-6 rounded-xl border border-slate-800">
+                        <h3 class="text-sm font-mono font-bold text-brand-light uppercase tracking-wider mb-4"><i class="fa-solid fa-sliders mr-2" aria-hidden="true"></i>RMM, Automation &amp; Backup</h3>
+                        <ul class="space-y-2 text-slate-300 text-sm">
+                            <li>NinjaOne RMM Platform</li>
+                            <li>ConnectWise Automate / Control</li>
+                            <li>Freshservice ITSM</li>
+                            <li>Advanced PowerShell &amp; Bash Scripting</li>
+                            <li>Datto BDR Infrastructure</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="font-display text-3xl font-bold text-white">Certifications</h2>
+                    <p class="text-slate-400 mt-2">10 Industry-recognized credentials verifying technical competence.</p>
+                </div>
+                <div class="reveal grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+
+                    <div class="bg-slate-900 p-5 rounded-lg border border-slate-800 text-center hover:border-brand-accent transition-colors">
+                        <i class="fa-solid fa-certificate text-3xl text-red-500 mb-3" aria-hidden="true"></i>
+                        <h4 class="font-bold text-white text-sm">CompTIA A+</h4>
+                    </div>
+
+                    <div class="bg-slate-900 p-5 rounded-lg border border-slate-800 text-center hover:border-brand-accent transition-colors">
+                        <i class="fa-solid fa-network-wired text-3xl text-blue-500 mb-3" aria-hidden="true"></i>
+                        <h4 class="font-bold text-white text-sm">CompTIA Network+</h4>
+                    </div>
+
+                    <div class="bg-slate-900 p-5 rounded-lg border border-slate-800 text-center hover:border-brand-accent transition-colors">
+                        <i class="fa-solid fa-shield-halved text-3xl text-emerald-500 mb-3" aria-hidden="true"></i>
+                        <h4 class="font-bold text-white text-sm">CompTIA Security+</h4>
+                    </div>
+
+                    <div class="bg-slate-900 p-5 rounded-lg border border-slate-800 text-center hover:border-brand-accent transition-colors">
+                        <i class="fa-solid fa-server text-3xl text-purple-500 mb-3" aria-hidden="true"></i>
+                        <h4 class="font-bold text-white text-sm">CompTIA Server+</h4>
+                    </div>
+
+                    <div class="bg-slate-900 p-5 rounded-lg border border-slate-800 text-center hover:border-brand-accent transition-colors">
+                        <i class="fa-brands fa-linux text-3xl text-yellow-500 mb-3" aria-hidden="true"></i>
+                        <h4 class="font-bold text-white text-sm">LE-1 Linux Essentials</h4>
+                    </div>
+
+                    <div class="bg-slate-900 p-5 rounded-lg border border-slate-800 text-center hover:border-brand-accent transition-colors">
+                        <i class="fa-solid fa-user-shield text-3xl text-cyan-500 mb-3" aria-hidden="true"></i>
+                        <h4 class="font-bold text-white text-sm">ISC2 Certified in Cybersecurity</h4>
+                    </div>
+
+                    <div class="bg-slate-900 p-5 rounded-lg border border-slate-800 text-center hover:border-brand-accent transition-colors">
+                        <i class="fa-brands fa-windows text-3xl text-blue-400 mb-3" aria-hidden="true"></i>
+                        <h4 class="font-bold text-white text-sm">MTA Windows Server Admin</h4>
+                    </div>
+
+                    <div class="bg-slate-900 p-5 rounded-lg border border-slate-800 text-center hover:border-brand-accent transition-colors">
+                        <i class="fa-solid fa-lock text-3xl text-indigo-500 mb-3" aria-hidden="true"></i>
+                        <h4 class="font-bold text-white text-sm">MTA Security Fundamentals</h4>
+                    </div>
+
+                    <div class="bg-slate-900 p-5 rounded-lg border border-slate-800 text-center hover:border-brand-accent transition-colors">
+                        <i class="fa-solid fa-globe text-3xl text-amber-500 mb-3" aria-hidden="true"></i>
+                        <h4 class="font-bold text-white text-sm">MTA Networking Fundamentals</h4>
+                    </div>
+
+                    <div class="bg-slate-900 p-5 rounded-lg border border-slate-800 text-center hover:border-brand-accent transition-colors">
+                        <i class="fa-solid fa-shield-cat text-3xl text-red-600 mb-3" aria-hidden="true"></i>
+                        <h4 class="font-bold text-white text-sm">Fortinet Certified Associate</h4>
+                    </div>
+
+                </div>
+
+                <div class="text-center mt-10">
+                    <a href="https://www.credly.com/users/arlington-trenck" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-brand-light hover:underline text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-light rounded">
+                        <span>View Official Credly Profile</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-slate-900/80 border-t border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="reveal max-w-2xl mx-auto bg-slate-900 p-8 md:p-12 rounded-2xl border border-slate-800 shadow-xl">
+                    <h2 class="font-display text-3xl font-bold text-white mb-4">Connect With Me</h2>
+                    <p class="text-slate-400 mb-8 leading-relaxed">
+                        Feel free to reach out via email, LinkedIn, or Credly for professional inquiries, collaborations, or networking.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-6 text-slate-300">
+                        <a href="mailto:arly@trenck.net" class="flex items-center gap-3 bg-slate-950 px-5 py-3 rounded-xl border border-slate-800 hover:border-brand-accent hover:text-white transition-colors w-full sm:w-auto justify-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-light">
+                            <i class="fa-solid fa-envelope text-brand-light" aria-hidden="true"></i>
+                            <span>arly@trenck.net</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/arlytrenck" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 bg-slate-950 px-5 py-3 rounded-xl border border-slate-800 hover:border-brand-accent hover:text-white transition-colors w-full sm:w-auto justify-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-light">
+                            <i class="fa-brands fa-linkedin text-brand-light" aria-hidden="true"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://www.credly.com/users/arlington-trenck" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 bg-slate-950 px-5 py-3 rounded-xl border border-slate-800 hover:border-brand-accent hover:text-white transition-colors w-full sm:w-auto justify-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-light">
+                            <i class="fa-solid fa-award text-brand-light" aria-hidden="true"></i>
+                            <span>Credly</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900/80 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-xs text-slate-500 font-mono">
+            <p>&copy; <span id="year">2026</span> Arly Trenck. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Structured data for search engines -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Arly Trenck",
+        "url": "https://trenck.net",
+        "image": "https://trenck.net/headshot.jpg",
+        "jobTitle": "IT Systems Engineer & Infrastructure Architect",
+        "email": "mailto:arly@trenck.net",
+        "sameAs": [
+            "https://www.linkedin.com/in/arlytrenck",
+            "https://www.credly.com/users/arlington-trenck"
+        ]
+    }
+    </script>
+
+    <!-- Interaction scripts -->
+    <script>
+        // Keep the footer copyright year current
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile navigation toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const menuIcon = menuBtn.querySelector('i');
+
+        function setMenuState(isOpen) {
+            menu.classList.toggle('hidden', !isOpen);
+            menuBtn.setAttribute('aria-expanded', String(isOpen));
+            menuIcon.classList.toggle('fa-bars', !isOpen);
+            menuIcon.classList.toggle('fa-xmark', isOpen);
+        }
+
+        menuBtn.addEventListener('click', () => {
+            setMenuState(menu.classList.contains('hidden'));
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => setMenuState(false));
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !menu.classList.contains('hidden')) {
+                setMenuState(false);
+                menuBtn.focus();
+            }
+        });
+
+        // Scroll-reveal animation — skipped entirely if the user prefers reduced motion
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const revealEls = document.querySelectorAll('.reveal');
+
+        if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+            revealEls.forEach(el => el.classList.add('is-visible'));
+        } else {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            revealEls.forEach(el => observer.observe(el));
+        }
+    </script>
+</body>
+</html>

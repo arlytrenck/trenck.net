@@ -1,0 +1,186 @@
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-paper/80">
+        <div class="max-w-page mx-auto px-6 sm:px-10 pt-24 pb-12">
+            <div class="grid gap-12 md:grid-cols-12">
+                <div class="md:col-span-6">
+                    <p class="text-[2.25rem] sm:text-[2.75rem] font-light tracking-[-0.02em] text-paper leading-[0.95]">Arly Trenck</p>
+                    <p class="mt-5 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-paper/50">IT Systems Engineer &mdash; Infrastructure Architect</p>
+                </div>
+                <nav class="md:col-span-3" aria-label="Footer">
+                    <p class="text-[0.62rem] font-semibold uppercase tracking-[0.2em] text-paper/40">Navigate</p>
+                    <ul class="mt-5 space-y-2.5 text-sm">
+                        <li><a href="/about/" class="link-underline text-paper/75 hover:text-paper">About</a></li>
+                        <li><a href="/experience/" class="link-underline text-paper/75 hover:text-paper">Experience</a></li>
+                        <li><a href="/skills/" class="link-underline text-paper/75 hover:text-paper">Skills</a></li>
+                        <li><a href="/certifications/" class="link-underline text-paper/75 hover:text-paper">Certifications</a></li>
+                        <li><a href="/contact/" class="link-underline text-paper/75 hover:text-paper">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="md:col-span-3">
+                    <p class="text-[0.62rem] font-semibold uppercase tracking-[0.2em] text-paper/40">Elsewhere</p>
+                    <ul class="mt-5 space-y-2.5 text-sm">
+                        <li><a href="mailto:arly@trenck.net" class="link-underline text-paper/75 hover:text-paper">arly@trenck.net</a></li>
+                        <li><a href="https://www.linkedin.com/in/arlytrenck" target="_blank" rel="me noopener noreferrer" class="link-underline text-paper/75 hover:text-paper">LinkedIn</a></li>
+                        <li><a href="https://www.credly.com/users/arlington-trenck" target="_blank" rel="me noopener noreferrer" class="link-underline text-paper/75 hover:text-paper">Credly</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-20 pt-6 border-t border-paper/15 text-[0.68rem] uppercase tracking-nav text-paper/40">
+                <p>&copy; <span id="year">2026</span> Arly Trenck. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interaction scripts -->
+    <script>
+        (function () {
+            var yearEl = document.getElementById('year');
+            if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+            var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            /* ---------- legacy single-page hashes -> dedicated pages ---------- */
+            (function () {
+                if (location.pathname !== '/' || !location.hash) return;
+                var map = {
+                    '#about': '/about/', '#experience': '/experience/', '#skills': '/skills/',
+                    '#certifications': '/certifications/', '#contact': '/contact/', '#top': '/'
+                };
+                var to = map[location.hash];
+                if (to && to !== '/') location.replace(to);
+            })();
+
+            /* ---------- sticky nav: shadow on scroll, hide on scroll-down ---------- */
+            var header = document.getElementById('site-header');
+            var menu = document.getElementById('mobile-menu');
+            var lastY = window.scrollY;
+            if (header) {
+                var onNavScroll = function () {
+                    var y = window.scrollY;
+                    header.classList.toggle('is-stuck', y > 8);
+                    var menuOpen = menu && !menu.classList.contains('hidden');
+                    if (!menuOpen && y > 260 && y > lastY + 6) {
+                        header.classList.add('nav-hidden');
+                    } else if (y < lastY - 6 || y < 260) {
+                        header.classList.remove('nav-hidden');
+                    }
+                    lastY = y;
+                };
+                onNavScroll();
+                window.addEventListener('scroll', onNavScroll, { passive: true });
+            }
+
+            /* ---------- mobile navigation toggle ---------- */
+            var menuBtn = document.getElementById('mobile-menu-btn');
+            if (menuBtn && menu) {
+                var menuIcon = menuBtn.querySelector('i');
+                var setMenuState = function (isOpen) {
+                    menu.classList.toggle('hidden', !isOpen);
+                    menuBtn.setAttribute('aria-expanded', String(isOpen));
+                    if (menuIcon) {
+                        menuIcon.classList.toggle('fa-bars', !isOpen);
+                        menuIcon.classList.toggle('fa-xmark', isOpen);
+                    }
+                };
+                menuBtn.addEventListener('click', function () { setMenuState(menu.classList.contains('hidden')); });
+                menu.querySelectorAll('a').forEach(function (link) {
+                    link.addEventListener('click', function () { setMenuState(false); });
+                });
+                document.addEventListener('keydown', function (e) {
+                    if (e.key === 'Escape' && !menu.classList.contains('hidden')) { setMenuState(false); menuBtn.focus(); }
+                });
+            }
+
+            /* ---------- contact form: compose a mailto: message ---------- */
+            var cform = document.getElementById('contact-form');
+            if (cform) {
+                cform.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    if (cform.reportValidity && !cform.reportValidity()) return;
+                    var g = function (n) { var el = cform.elements[n]; return el && el.value ? el.value.trim() : ''; };
+                    var name = g('name'), email = g('email'), message = g('message');
+                    var subject = 'Website enquiry' + (name ? ' from ' + name : '');
+                    var body = message + '\n\n— ' + name + (email ? ' <' + email + '>' : '');
+                    var note = document.getElementById('cf-note');
+                    if (note) note.textContent = 'Opening your email app…';
+                    window.location.href = 'mailto:arly@trenck.net?subject=' +
+                        encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+                });
+            }
+
+            /* ---------- entrance animations (scroll-position based; no IO dependency) ---------- */
+            // stagger children of [data-stagger] groups via a CSS custom prop
+            Array.prototype.forEach.call(document.querySelectorAll('[data-stagger]'), function (group) {
+                var i = 0;
+                Array.prototype.forEach.call(group.querySelectorAll('[data-animate]'), function (el) {
+                    if (!el.style.getPropertyValue('--delay')) {
+                        el.style.setProperty('--delay', (i * 55) + 'ms');
+                    }
+                    i++;
+                });
+            });
+
+            var animEls = Array.prototype.slice.call(
+                document.querySelectorAll('[data-animate], .rule-draw, .media-reveal')
+            );
+            var revealAll = function () { animEls.forEach(function (el) { el.classList.add('in'); }); animEls = []; };
+
+            if (reduceMotion) {
+                revealAll();
+            } else {
+                var showInView = function () {
+                    var vh = window.innerHeight || document.documentElement.clientHeight;
+                    animEls = animEls.filter(function (el) {
+                        if (el.getBoundingClientRect().top < vh * 0.9) { el.classList.add('in'); return false; }
+                        return true;
+                    });
+                    if (!animEls.length) {
+                        window.removeEventListener('scroll', onAnimScroll);
+                        window.removeEventListener('resize', onAnimScroll);
+                    }
+                };
+                var lastRun = 0;
+                var onAnimScroll = function () {
+                    var now = Date.now();
+                    if (now - lastRun < 90) return;
+                    lastRun = now;
+                    showInView();
+                };
+                showInView();
+                window.addEventListener('scroll', onAnimScroll, { passive: true });
+                window.addEventListener('resize', onAnimScroll);
+                // catch late layout shifts (web font / image load)
+                window.addEventListener('load', showInView);
+                setTimeout(showInView, 350);
+                setTimeout(showInView, 900);
+                // hard safety net: never leave content hidden
+                setTimeout(revealAll, 2600);
+            }
+
+            /* ---------- hero text drifts + fades as it scrolls away ---------- */
+            var heroInner = document.querySelector('.hero-inner');
+            var heroSection = document.getElementById('top');
+            if (heroInner && heroSection && !reduceMotion) {
+                var hh = heroSection.offsetHeight;
+                var remeasure = function () { hh = heroSection.offsetHeight; };
+                window.addEventListener('resize', remeasure);
+                var pending = false;
+                var applyHero = function () {
+                    pending = false;
+                    var p = hh ? Math.min(Math.max((window.scrollY - 24) / hh, 0), 1) : 0;
+                    heroInner.style.transform = 'translateY(' + (p * -22).toFixed(1) + 'px)';
+                    heroInner.style.opacity = (1 - p * 0.42).toFixed(3);
+                };
+                applyHero();
+                window.addEventListener('scroll', function () {
+                    if (pending) return;
+                    pending = true;
+                    requestAnimationFrame(applyHero);
+                }, { passive: true });
+            }
+        })();
+    </script>
+</body>
+</html>

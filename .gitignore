@@ -1,0 +1,16 @@
+# build output
+dist/
+# deps
+node_modules/
+# design backups / scratch
+_multipage-bak/
+_onepage-bak/
+_predesign-bak/
+staged-changes/
+# per-file backups
+*.bak
+*.bak.*
+# os / editor
+.DS_Store
+*.swp
+*~
