@@ -1,15 +1,19 @@
-# build output
+# This repo mirrors the deployed site at /var/www/html on 10.0.0.100.
+# The old partials + build.py toolchain is retired to _build-legacy/ (kept on
+# disk, recoverable from git history) and not tracked.
+_build-legacy/
+
+# scratch / backups / deps (pre-restructure leftovers)
 dist/
-# deps
 node_modules/
-# design backups / scratch
 _multipage-bak/
 _onepage-bak/
 _predesign-bak/
 staged-changes/
-# per-file backups
 *.bak
 *.bak.*
+styles.css
+
 # os / editor
 .DS_Store
 *.swp
