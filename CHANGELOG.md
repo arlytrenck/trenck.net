@@ -4,6 +4,7 @@ Notable changes to the trenck.net site. Grouped by date, newest first.
 Format: [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
+- home: both hero buttons now use the outline `.btn` style (dropped `.btn-solid` on "Get in touch").
 
 ## 2026-09-03 (perf + forms)
 ### Changed
