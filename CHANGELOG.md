@@ -5,20 +5,6 @@ Format: [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
-## 2026-09-03 (content)
-### Changed
-- Rewrote parts of `/about/`, `/experience/`, `/skills/` to reflect what the
-  GitHub repos actually demonstrate:
-  - **Skills** — new "Infrastructure as code & DevOps" group (Docker & Compose,
-    Ansible, Caddy + automatic TLS, Prometheus/Grafana/Alertmanager, Tailscale,
-    restic, Git-based config-as-code, ShellCheck & PSScriptAnalyzer CI).
-  - **Experience** — new "Infrastructure as code & open source" entry; the
-    Automation row notes the toolkits are published open source.
-  - **About** — a second intro line on the self-hosted-as-code practice + a new
-    "Infrastructure as code" focus area.
-- Person JSON-LD (`description`, `skills`, `knowsAbout`) and the
-  experience/skills/about meta descriptions updated to match.
-
 ## 2026-09-03 (later)
 ### Changed
 - `/homelab/`: removed the media-acquisition tool names from the "Media" row to
