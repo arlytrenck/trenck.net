@@ -5,6 +5,22 @@ Format: [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+## 2026-09-03 (later)
+### Changed
+- `/homelab/`: removed the media-acquisition tool names from the "Media" row to
+  avoid any piracy misread — it now describes the media *servers* (Emby, Immich,
+  Komga, Tdarr) only.
+### Added
+- **GitHub** in the footer "Elsewhere" list on every page, and as a button on
+  `/contact/`.
+### SEO
+- `github.com/arlytrenck` added to every page's `rel="me"` and the Person
+  `sameAs` (entity consolidation).
+- `/projects/`: JSON-LD `ItemList` of `SoftwareSourceCode` for the three public
+  repos; `WebPage.mainEntity` links it.
+- `sitemap.xml` `lastmod` refreshed to 2026-09-03 on all URLs.
+- Tightened the home and about meta descriptions to ~155 chars.
+
 ## 2026-09-03
 ### Added
 - **`/projects/`** — outlines the public toolkits (`sysadmin-linux`,

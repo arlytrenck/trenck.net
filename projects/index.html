@@ -193,7 +193,7 @@
       "@type": "WebPage",
       "@id": "https://trenck.net/projects/#webpage",
       "url": "https://trenck.net/projects/",
-      "name": "Projects \u00b7 Arly Trenck",
+      "name": "Projects · Arly Trenck",
       "description": "Open-source system-administration toolkits, this website's source, and the infrastructure-as-code behind the trenck.net homelab — on GitHub.",
       "isPartOf": {
         "@id": "https://trenck.net/#website"
@@ -204,7 +204,10 @@
       "primaryImageOfPage": {
         "@id": "https://trenck.net/#person"
       },
-      "inLanguage": "en-US"
+      "inLanguage": "en-US",
+      "mainEntity": {
+        "@id": "https://trenck.net/projects/#repos"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -221,6 +224,55 @@
           "position": 2,
           "name": "Experience",
           "item": "https://trenck.net/projects/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://trenck.net/projects/#repos",
+      "name": "Public repositories",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "SoftwareSourceCode",
+            "name": "sysadmin-linux",
+            "description": "Bash toolkit and reference docs for single-node Linux and homelab operations: config snapshots, backup verification and restore drills, container-host tuning, reverse-proxy and TLS.",
+            "codeRepository": "https://github.com/arlytrenck/sysadmin-linux",
+            "programmingLanguage": "Shell",
+            "author": {
+              "@id": "https://trenck.net/#person"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "SoftwareSourceCode",
+            "name": "sysadmin-windows",
+            "description": "PowerShell config-snapshot and drift export, Hyper-V host and VM inventory, and hardening checks.",
+            "codeRepository": "https://github.com/arlytrenck/sysadmin-windows",
+            "programmingLanguage": "PowerShell",
+            "author": {
+              "@id": "https://trenck.net/#person"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "SoftwareSourceCode",
+            "name": "trenck.net",
+            "description": "Source of this website — hand-written multi-page HTML, prebuilt and purged Tailwind, self-hosted fonts and icons, hardened Caddy and Cloudflare front end.",
+            "codeRepository": "https://github.com/arlytrenck/trenck.net",
+            "programmingLanguage": "HTML",
+            "author": {
+              "@id": "https://trenck.net/#person"
+            }
+          }
         }
       ]
     }
@@ -337,6 +389,7 @@
                         <li><a href="mailto:arly@trenck.net" class="link-underline text-paper/75 hover:text-paper">arly@trenck.net</a></li>
                         <li><a href="https://www.linkedin.com/in/arlytrenck" target="_blank" rel="me noopener noreferrer" class="link-underline text-paper/75 hover:text-paper">LinkedIn</a></li>
                         <li><a href="https://www.credly.com/users/arlington-trenck" target="_blank" rel="me noopener noreferrer" class="link-underline text-paper/75 hover:text-paper">Credly</a></li>
+                        <li><a href="https://github.com/arlytrenck" target="_blank" rel="me noopener noreferrer" class="link-underline text-paper/75 hover:text-paper">GitHub</a></li>
                     </ul>
                 </div>
             </div>
