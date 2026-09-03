@@ -17,6 +17,9 @@ styles.css
 *.bak.*
 dist/
 
+# retired: Font Awesome (icons are inline SVG now; dir is root-owned — sudo rm -rf fa/)
+fa/
+
 # os / editor
 .DS_Store
 *.swp

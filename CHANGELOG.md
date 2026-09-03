@@ -5,6 +5,28 @@ Format: [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+## 2026-09-03 (perf + forms)
+### Changed
+- **Self-hosted Libre Franklin** (weights 300/400/500/600, latin + latin-ext,
+  `font-display: swap`) under `/fonts/` — removes the render-blocking Google
+  Fonts request and the two `preconnect`s. Two hero weights are `preload`ed.
+- **Dropped Font Awesome.** The six icons in use (menu, close, envelope,
+  LinkedIn, GitHub, award) are now inline SVG. `all.min.css` + 4 webfonts gone;
+  `/fa/` no longer shipped.
+- **Contact form now delivers.** Posts to Web3Forms via `fetch()` with an inline
+  success/error message; falls back to a `mailto:` compose on any failure or if
+  the access key is unset. *Action: paste a free Web3Forms access key into the
+  hidden `access_key` field on `/contact/`.*
+### Added
+- **Cloudflare Web Analytics** beacon on every page (cookieless). *Action:
+  replace `REPLACE_WITH_CF_WEB_ANALYTICS_TOKEN` with the token from the CF
+  dashboard, or enable auto-injection for the zone.*
+- **`deploy.sh`** — `rsync` + `--chown` + a local smoke test; self-elevates with
+  `sudo`. Kills the "edit repo, forget to deploy, nightly reverts it" footgun.
+### Notes
+- Immutable `Cache-Control` for `/fonts/ /img/` + hashed CSS is staged for the
+  Caddyfile (`host-config/staged/caddy-cache-headers.txt` in the homelab repo).
+
 ## 2026-09-03 (later)
 ### Changed
 - `/homelab/`: removed the media-acquisition tool names from the "Media" row to
