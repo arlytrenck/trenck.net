@@ -18,9 +18,9 @@ Format: [Keep a Changelog](https://keepachangelog.com/).
   the access key is unset. *Action: paste a free Web3Forms access key into the
   hidden `access_key` field on `/contact/`.*
 ### Added
-- **Cloudflare Web Analytics** beacon on every page (cookieless). *Action:
-  replace `REPLACE_WITH_CF_WEB_ANALYTICS_TOKEN` with the token from the CF
-  dashboard, or enable auto-injection for the zone.*
+- **Cloudflare Web Analytics** — enable it in the CF dashboard for the zone
+  (auto-injects the cookieless beacon; the CSP now allows it). No code in the
+  repo.
 - **`deploy.sh`** — `rsync` + `--chown` + a local smoke test; self-elevates with
   `sudo`. Kills the "edit repo, forget to deploy, nightly reverts it" footgun.
 ### Notes
