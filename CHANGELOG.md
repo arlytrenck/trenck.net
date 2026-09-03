@@ -4,6 +4,12 @@ Notable changes to the trenck.net site. Grouped by date, newest first.
 Format: [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
+- favicon: real icon set — `favicon.svg` (navy tile + pen-stroked "A"), `favicon.ico`
+  (16/32/48), `apple-touch-icon.png` (180), `icon-192/512.png`, `site.webmanifest`;
+  replaces the single inline data-URI. `<link>` set on every page.
+- experience: reworked around the engineering — Multi-site infrastructure, Identity &
+  access, Security & continuity, Automation & tooling. MSP/BPO partnership row dropped.
+- about: focus-list — swapped the MSP/BPO line for "Infrastructure as code".
 - about: rewrote as a first-person “about me” (client's copy) — what he builds, plus a paragraph on running the homelab as code; sharpened the focus-area wording; meta description updated.
 - home: both hero buttons now use the outline `.btn` style (dropped `.btn-solid` on "Get in touch").
 
