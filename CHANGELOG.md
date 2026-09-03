@@ -5,6 +5,23 @@ Format: [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+## 2026-09-03
+### Added
+- **`/projects/`** — outlines the public toolkits (`sysadmin-linux`,
+  `sysadmin-windows`), this site's source, and the private homelab IaC set, with
+  a link to the GitHub profile. Added to the nav + `sitemap.xml`; `rel="me"` +
+  JSON-LD `sameAs` for GitHub.
+- **`/homelab/`** — outlines the self-hosted lab: compute, access & identity,
+  media, monitoring & alerting, backup & recovery, remote access, plus a stack
+  chip row. Added to the nav + `sitemap.xml`.
+- Both pages are structural clones of `/experience/` — identical head, nav,
+  footer, and script; content built only from classes already in the purged CSS.
+### Changed
+- Nav is now 7 items (added Projects, Homelab) on every page + the footer.
+- Repo tidy: retired scratch (`dist/`, `_*-bak/`, `staged-changes/`, stale
+  `*.bak`) consolidated under `_build-legacy/`; `.gitignore` simplified; README
+  expanded with the page list, stack notes, and the deploy command.
+
 ## 2026-09-02
 ### Changed
 - **Build system retired.** This repo now mirrors the deployed

@@ -1,18 +1,21 @@
 # This repo mirrors the deployed site at /var/www/html on 10.0.0.100.
-# The old partials + build.py toolchain is retired to _build-legacy/ (kept on
-# disk, recoverable from git history) and not tracked.
+# Edit the HTML directly; deploy = rsync (see README).
+
+# Retired build toolchain + pre-restructure scratch, kept on disk for reference,
+# recoverable from git history. Never deployed (rsync excludes it).
 _build-legacy/
 
-# scratch / backups / deps (pre-restructure leftovers)
-dist/
+# Node deps for the retired image pipeline (some files are root-owned —
+# `sudo mv node_modules _build-legacy/` when convenient).
 node_modules/
-_multipage-bak/
-_onepage-bak/
-_predesign-bak/
-staged-changes/
+
+# un-minified Tailwind output; the pages load styles.<hash>.css
+styles.css
+
+# stray backups / build dirs, in case the toolchain is ever un-retired
 *.bak
 *.bak.*
-styles.css
+dist/
 
 # os / editor
 .DS_Store
