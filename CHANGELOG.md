@@ -4,6 +4,9 @@ Notable changes to the trenck.net site. Grouped by date, newest first.
 Format: [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
+- certifications: each row now leads with its official Credly badge image
+  (`/img/certs/*.png`, self-hosted, 220&times;220, ~248&nbsp;KB total) — badge &rarr;
+  name &rarr; issuer. Layout uses existing utilities + inline styles; no CSS rebuild.
 - favicon: real icon set — `favicon.svg` (navy tile + pen-stroked "A"), `favicon.ico`
   (16/32/48), `apple-touch-icon.png` (180), `icon-192/512.png`, `site.webmanifest`;
   replaces the single inline data-URI. `<link>` set on every page.
