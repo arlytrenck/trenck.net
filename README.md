@@ -17,7 +17,8 @@ boilerplate, nav, footer, and one interaction script.
 - Tailwind, prebuilt and purged to `styles.<hash>.css` (~19 KB). **New markup
   must reuse classes already in that file** — the build step is retired
   (`_build-legacy/`), so an unknown class renders unstyled
-- Libre Franklin (Google Fonts) + Font Awesome, both self-hosted under `/fa/`
+- Libre Franklin, self-hosted under `/fonts/` (no Google Fonts request). Icons
+  are inline SVG — Font Awesome was retired
 - Responsive AVIF/WebP/JPEG headshot in `/img/`
 - Structured data (`@graph` JSON-LD) per page; `sitemap.xml`, `robots.txt`,
   `.well-known/security.txt`
@@ -25,11 +26,12 @@ boilerplate, nav, footer, and one interaction script.
 ## Deploy
 
 ```bash
-sudo rsync -a --delete --chown=caddy:caddy \
-  --exclude=.git --exclude=README.md --exclude=CHANGELOG.md --exclude=_build-legacy \
-  --exclude=node_modules \
-  ~/site-build/ /var/www/html/
-# then: Cloudflare → Caching → Purge Everything
+sudo ./deploy.sh
 ```
+
+Syncs this tree to `/var/www/html`, bumps `sitemap.xml`'s `<lastmod>` to
+today, and smoke-tests every page through the local Caddy. HTML is served
+pass-through (Cloudflare `cf-cache: DYNAMIC`) and static assets are
+content-hashed or cached immutably, so no Cloudflare purge is needed.
 
 See `CHANGELOG.md` for history.

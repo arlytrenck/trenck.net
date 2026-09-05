@@ -4,6 +4,15 @@ Notable changes to the trenck.net site. Grouped by date, newest first.
 Format: [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
+- projects + homelab: fixed a copy-paste bug from when both pages were
+  cloned off `/experience/` — each page's BreadcrumbList JSON-LD labeled
+  its own position-2 crumb `"name": "Experience"` instead of "Projects"/
+  "Homelab" (the `item` URL was already correct, just the visible name).
+  Also verified Homelab's stat band and alert-rule count against this
+  VM's actual live state (it *is* the homelab host) — 16 vCPU, 54 GiB,
+  31 running containers, 32 configured alert rules — all match the
+  page's claims exactly (the "~" prefixes were already appropriately
+  hedged). No other inaccuracies found on either page.
 - resume: pulled back per the user — dropped the home hero's "Résumé"
   button and the `/contact/` icon-button row entry entirely; footer
   "Elsewhere" link kept on every page but shortened from "Résumé (PDF)"
