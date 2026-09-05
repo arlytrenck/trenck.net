@@ -4,6 +4,18 @@ Notable changes to the trenck.net site. Grouped by date, newest first.
 Format: [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
+- resume: replaced the downloadable `/resume.pdf` with a new `/resume/` HTML
+  page (same résumé content, self-contained print-friendly styling, a small
+  "&larr; trenck.net" back-link). The résumé source had just been corrected
+  (office count 30+&rarr;29, added a 1,250+ end-user figure, and the
+  Certifications section trimmed to the same 7 credentials as
+  `/certifications/`) but this VM has no LibreOffice/pandoc/node to
+  regenerate a PDF, so HTML became the canonical format instead of shipping
+  a stale PDF. Footer "Résumé" link (all 9 pages) now points to `/resume/`
+  and no longer opens in a new tab, since it's a same-site page rather than
+  a downloaded file. Old `resume.pdf` removed; `/resume/` added to
+  `sitemap.xml`. Same résumé HTML also published to `arlytrenck/arlytrenck`,
+  replacing that repo's stale PDF.
 - projects: added `homelab-public` as a 4th repo card — a new sanitized
   public mirror of the homelab's Docker Compose stacks (domain/IP/email
   redacted, hardening conventions and real Prometheus rules intact). The
