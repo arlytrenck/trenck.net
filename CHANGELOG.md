@@ -4,6 +4,17 @@ Notable changes to the trenck.net site. Grouped by date, newest first.
 Format: [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
+- analytics: added the Umami tracking script (`stats.trenck.net/script.js`)
+  to all 10 pages (the 9 site pages + `/resume/`), right before `</head>`.
+  Umami was already running for internal dashboard use but had no public
+  vhost and wasn't tracking real visitors; `stats.trenck.net` (public Caddy
+  vhost, DNS-01 cert, CSP-allowlisted) now exposes just the tracking script
+  + collect endpoint plus Umami's own login-gated dashboard. Found and fixed
+  along the way: Umami was still on its default `admin`/`umami` login
+  (flagged by a prior session's docs as a pre-go-live TODO that never
+  happened) — changed before finishing the public rollout — and
+  `TWO_FACTOR_ENCRYPTION_KEY` was missing (2FA now available; needed the
+  same hex-32 format as `APP_SECRET`, not base64).
 - contact: `/contact/`'s form now uses a real Web3Forms access key instead of
   the `REPLACE_WITH_...` placeholder, so it actually submits server-side
   instead of always falling back to a `mailto:` compose. `api.web3forms.com`
