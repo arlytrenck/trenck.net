@@ -4,6 +4,14 @@ Notable changes to the trenck.net site. Grouped by date, newest first.
 Format: [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
+- skills: cross-checked chips against the resume's Technical Skills list
+  and added 4 genuine gaps — Active Directory &amp; Group Policy, Docker,
+  VMware, and Ansible — each already referenced elsewhere on the site
+  (About's homelab paragraph, every Experience theme) but missing here.
+  Mirrored the same 4 additions into the site-wide `knowsAbout` JSON-LD
+  block (same array repeated on all 9 pages) for consistency. No stat
+  band added — Skills is a flat chip taxonomy with no narrative sentences
+  to weave figures into, so this pass was an accuracy check instead.
 - experience + about: office count corrected 30+/29 (live count from
   williampitt.com/real-estate-offices/, 29 as of 2026-09-05) and end-user
   figure corrected 1,400+ &rarr; 1,250+, both per the user directly. About's
