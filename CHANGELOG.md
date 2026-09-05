@@ -4,6 +4,10 @@ Notable changes to the trenck.net site. Grouped by date, newest first.
 Format: [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
+- resume: added `/resume.pdf`; linked from the home hero (new "Résumé" button
+  between "Get in touch" and "LinkedIn"), the contact page's icon-button row,
+  and the footer "Elsewhere" list on every page. All existing `.btn`/
+  `.link-underline` utilities, no CSS rebuild.
 - certifications: each row now leads with its official Credly badge image
   (`/img/certs/*.png`, self-hosted, 220&times;220, ~248&nbsp;KB total) — badge &rarr;
   name &rarr; issuer. Layout uses existing utilities + inline styles; no CSS rebuild.
