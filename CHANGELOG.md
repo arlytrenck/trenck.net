@@ -4,6 +4,16 @@ Notable changes to the trenck.net site. Grouped by date, newest first.
 Format: [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
+- experience: added a "by the numbers" stat band (30+ offices, 1,400+ end
+  users, onboarding time cut in half — same `<dl>` pattern as the About
+  page's fact band) and wove concrete figures into the four theme
+  paragraphs (52 APs / 31 offices RUCKUS migration, ~1,200-user AD–Okta
+  mapping, the onboarding automation's 50% time cut), all sourced from the
+  2026 resume. Also restored "Massachusetts" to this page's service-area
+  copy (meta/OG/Twitter/JSON-LD description + body text) — it was dropped
+  in an earlier pass but is still part of the actual multi-site scope.
+- about: fact band "10 industry certifications" → "7", matching the MTA
+  cleanup below.
 - accessibility: every `target="_blank"` link (LinkedIn, Credly, GitHub,
   Résumé — 44 across all 9 pages) now carries a screen-reader-only
   "(opens in a new tab)" hint (`<span class="sr-only">`, reusing the
