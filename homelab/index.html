@@ -263,7 +263,7 @@
                 <div class="mt-6 h-px bg-line rule-draw" data-animate style="--delay:120ms"></div>
 
                 <p class="mt-8 md:mt-12 max-w-[46rem] text-ink font-light tracking-[-0.01em] leading-[1.42] text-[clamp(1.15rem,0.9vw+0.85rem,1.5rem)]" data-animate>
-                    A self-hosted lab for the same patterns I run in production: one virtual machine, around thirty containerised services behind a hardened reverse proxy and single sign-on, with layered backups, monitoring, and alerts that reach my phone.
+                    A self-hosted lab for the same patterns I run in production: one virtual machine, around thirty-five containerised services behind a hardened reverse proxy and single sign-on, with layered backups, monitoring, and alerts that reach my phone.
                 </p>
 
                 <dl class="mt-12 md:mt-16 grid sm:grid-cols-3 border-y border-line divide-y sm:divide-y-0 sm:divide-x divide-line" data-stagger>
@@ -273,11 +273,11 @@
                     </div>
                     <div class="py-5 sm:px-8" data-animate>
                         <dt class="kicker kicker-muted">Services</dt>
-                        <dd class="mt-2 text-lg font-light text-ink">30 containers, in git</dd>
+                        <dd class="mt-2 text-lg font-light text-ink">35 containers, in git</dd>
                     </div>
                     <div class="py-5 sm:pl-8" data-animate>
                         <dt class="kicker kicker-muted">Backups</dt>
-                        <dd class="mt-2 text-lg font-light text-ink">4 independent copies</dd>
+                        <dd class="mt-2 text-lg font-light text-ink">5 independent copies</dd>
                     </div>
                 </dl>
 
@@ -296,11 +296,11 @@
                     </div>
                     <div class="border-b border-line py-8 md:py-10 grid md:grid-cols-12 gap-x-10 gap-y-3" data-animate>
                         <h2 class="md:col-span-5 text-2xl md:text-[1.75rem] font-normal tracking-[-0.01em] text-ink leading-tight">Monitoring &amp; alerting</h2>
-                        <p class="md:col-span-7 text-body leading-relaxed max-w-[42rem]">Prometheus, Grafana and cAdvisor for metrics; Uptime Kuma for reachability; ~30 alert rules routed through Alertmanager to a self-hosted push channel that also reports failed backups, expiring certificates, and pending image updates.</p>
+                        <p class="md:col-span-7 text-body leading-relaxed max-w-[42rem]">Prometheus, Grafana and cAdvisor for metrics, Loki and Promtail for centralized logs; Uptime Kuma for reachability; ~30 alert rules routed through Alertmanager to a self-hosted push channel that also reports failed backups, expiring certificates, and pending image updates.</p>
                     </div>
                     <div class="border-b border-line py-8 md:py-10 grid md:grid-cols-12 gap-x-10 gap-y-3" data-animate>
                         <h2 class="md:col-span-5 text-2xl md:text-[1.75rem] font-normal tracking-[-0.01em] text-ink leading-tight">Backup &amp; recovery</h2>
-                        <p class="md:col-span-7 text-body leading-relaxed max-w-[42rem]">Nightly age-encrypted database dumps, a deduplicated <span class="text-ink">restic</span> repository with real history and integrity checks, a guarded mirror to a second NAS, and a restore drill that runs on the first of every month and reports pass or fail.</p>
+                        <p class="md:col-span-7 text-body leading-relaxed max-w-[42rem]">Nightly age-encrypted database dumps, a deduplicated <span class="text-ink">restic</span> repository with real history and integrity checks, a guarded mirror to a second NAS, a weekly hypervisor-level snapshot of the whole VM, and a restore drill that runs on the first of every month and reports pass or fail.</p>
                     </div>
                     <div class="border-b border-line py-8 md:py-10 grid md:grid-cols-12 gap-x-10 gap-y-3" data-animate>
                         <h2 class="md:col-span-5 text-2xl md:text-[1.75rem] font-normal tracking-[-0.01em] text-ink leading-tight">Remote access</h2>

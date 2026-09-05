@@ -4,6 +4,13 @@ Notable changes to the trenck.net site. Grouped by date, newest first.
 Format: [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
+- homelab: refreshed stats against the actual live VM state after today's
+  stack additions (Loki+Promtail, Umami, a new Proxmox VM-level backup) —
+  container count 30&rarr;35 (`docker ps` confirms 35), backup layers
+  4&rarr;5 (the hypervisor-level weekly vzdump snapshot is genuinely new,
+  not just a recount), Monitoring paragraph now mentions Loki/Promtail for
+  log aggregation, Backup paragraph now mentions the weekly VM snapshot.
+  about: matching container-count update (30&rarr;35).
 - about: added, then removed per the user, a testimonial block (a LinkedIn
   recommendation from Erin Dunn) and its matching Person JSON-LD `review`
   property on all 9 pages. `/about/` and the shared JSON-LD are back to
