@@ -12,6 +12,9 @@ DEST="/var/www/html/"
 
 if [ "$(id -u)" -ne 0 ]; then exec sudo -- "$0" "$@"; fi
 
+# Keep sitemap.xml lastmod accurate without hand-editing it every time.
+sed -i "s/<lastmod>[0-9-]*<\/lastmod>/<lastmod>$(date +%F)<\/lastmod>/g" "${SRC}sitemap.xml"
+
 rsync -a --delete --chown=caddy:caddy \
   --exclude=.git --exclude=.gitignore --exclude=README.md --exclude=CHANGELOG.md \
   --exclude=deploy.sh --exclude=fa --exclude=_build-legacy --exclude=node_modules \
