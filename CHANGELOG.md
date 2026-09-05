@@ -4,6 +4,13 @@ Notable changes to the trenck.net site. Grouped by date, newest first.
 Format: [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
+- experience + about: office count corrected 30+/29 (live count from
+  williampitt.com/real-estate-offices/, 29 as of 2026-09-05) and end-user
+  figure corrected 1,400+ &rarr; 1,250+, both per the user directly. About's
+  intro paragraph and fact band now cite the 29-office figure too, and its
+  homelab paragraph gained a concrete "roughly 30 containerized services"
+  (from the resume's Technical Projects section) — same metrics-pass
+  treatment as Experience, applied one page later.
 - experience: added a "by the numbers" stat band (30+ offices, 1,400+ end
   users, onboarding time cut in half — same `<dl>` pattern as the About
   page's fact band) and wove concrete figures into the four theme
