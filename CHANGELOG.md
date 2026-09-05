@@ -4,6 +4,11 @@ Notable changes to the trenck.net site. Grouped by date, newest first.
 Format: [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
+- contact: `/contact/`'s form now uses a real Web3Forms access key instead of
+  the `REPLACE_WITH_...` placeholder, so it actually submits server-side
+  instead of always falling back to a `mailto:` compose. `api.web3forms.com`
+  was already allowlisted in the CSP (`form-action`/`connect-src`) from when
+  the placeholder was first wired in, so no Caddy change needed.
 - homelab: refreshed stats against the actual live VM state after today's
   stack additions (Loki+Promtail, Umami, a new Proxmox VM-level backup) —
   container count 30&rarr;35 (`docker ps` confirms 35), backup layers
