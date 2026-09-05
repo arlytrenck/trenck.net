@@ -4,6 +4,10 @@ Notable changes to the trenck.net site. Grouped by date, newest first.
 Format: [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
+- resume: pulled back per the user — dropped the home hero's "Résumé"
+  button and the `/contact/` icon-button row entry entirely; footer
+  "Elsewhere" link kept on every page but shortened from "Résumé (PDF)"
+  to just "Résumé".
 - skills: cross-checked chips against the resume's Technical Skills list
   and added genuine gaps — Docker, VMware, Ansible, and Git — each already
   referenced elsewhere on the site (About's homelab paragraph, every
