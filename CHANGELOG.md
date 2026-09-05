@@ -4,6 +4,10 @@ Notable changes to the trenck.net site. Grouped by date, newest first.
 Format: [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
+- accessibility: every `target="_blank"` link (LinkedIn, Credly, GitHub,
+  Résumé — 44 across all 9 pages) now carries a screen-reader-only
+  "(opens in a new tab)" hint (`<span class="sr-only">`, reusing the
+  utility already defined for the skip-link). No visual change.
 - certifications: dropped the 3 Microsoft MTA badges site-wide — retired by
   Microsoft, already dropped from the resume and the GitHub profile badge
   grid. `/certifications/` now lists 7: CompTIA A+/Network+/Security+/Server+,
