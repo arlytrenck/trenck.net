@@ -4,6 +4,13 @@ Notable changes to the trenck.net site. Grouped by date, newest first.
 Format: [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
+- homelab: stat band container count 35&rarr;36 (`docker ps` confirms 36 live)
+  — one more landed since the last refresh. The hedged "roughly 35"/"around
+  thirty-five" prose mentions on About/Homelab were left as-is, close enough
+  to stay accurate under a "roughly".
+- github: `arlytrenck/homelab` renamed to `arlytrenck/homelab-private` (no
+  change needed on trenck.net itself — the private repo was never linked
+  from the site, only `homelab-public` is).
 - analytics: added the Umami tracking script (`stats.trenck.net/script.js`)
   to all 10 pages (the 9 site pages + `/resume/`), right before `</head>`.
   Umami was already running for internal dashboard use but had no public
