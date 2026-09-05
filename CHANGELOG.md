@@ -4,6 +4,13 @@ Notable changes to the trenck.net site. Grouped by date, newest first.
 Format: [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
+- resume: reconciled the IT Support Specialist bullet's office count with the
+  rest of the résumé — "33 office locations" &rarr; "29 offices" (same figure
+  used everywhere else on the résumé and site now) — and dropped the
+  "1,400+ end users" figure entirely rather than try to reconcile a second
+  unverified historical number; "200+ endpoints" stays. Applied to
+  `/resume/` here, the résumé source `.docx`/`.html`, and the copy in
+  `arlytrenck/arlytrenck`.
 - resume: replaced the downloadable `/resume.pdf` with a new `/resume/` HTML
   page (same résumé content, self-contained print-friendly styling, a small
   "&larr; trenck.net" back-link). The résumé source had just been corrected
