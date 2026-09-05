@@ -4,6 +4,10 @@ Notable changes to the trenck.net site. Grouped by date, newest first.
 Format: [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
+- projects: the sysadmin-linux, sysadmin-windows, and trenck.net headings
+  are now links straight to their GitHub repos (`link-underline`, opens in
+  a new tab) — previously plain text, only reachable via the "View all
+  public repositories on GitHub" link at the bottom of the page.
 - projects + homelab: fixed a copy-paste bug from when both pages were
   cloned off `/experience/` — each page's BreadcrumbList JSON-LD labeled
   its own position-2 crumb `"name": "Experience"` instead of "Projects"/
