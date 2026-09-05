@@ -4,6 +4,12 @@ Notable changes to the trenck.net site. Grouped by date, newest first.
 Format: [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
+- certifications: dropped the 3 Microsoft MTA badges site-wide — retired by
+  Microsoft, already dropped from the resume and the GitHub profile badge
+  grid. `/certifications/` now lists 7: CompTIA A+/Network+/Security+/Server+,
+  LPI Linux Essentials, ISC2 CC, Fortinet FCA. Removed the matching entries
+  from the `hasCredential` JSON-LD (same block on every page) and the 3 now-
+  unused `/img/certs/mta-*.png` files.
 - resume: added `/resume.pdf`; linked from the home hero (new "Résumé" button
   between "Get in touch" and "LinkedIn"), the contact page's icon-button row,
   and the footer "Elsewhere" list on every page. All existing `.btn`/
