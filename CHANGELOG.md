@@ -4,20 +4,10 @@ Notable changes to the trenck.net site. Grouped by date, newest first.
 Format: [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
-- about: added a first testimonial — a LinkedIn recommendation from Erin
-  Dunn (Marketing Administrative Coordinator, dated March 2026) — as a new
-  "What colleagues say" block below Focus areas. Styled as a hairline-bordered
-  blockquote consistent with the page's editorial look; used a couple of
-  inline styles (`border-left`, `font-style: normal`) instead of new Tailwind
-  classes since the compiled `styles.a4df639c27.css` is a purged build and
-  the Tailwind build pipeline for this repo was retired back in
-  2026-09-02 (only a legacy copy remains under `_build-legacy/`, pointed at
-  the old `pages/`/`partials/` structure this repo no longer has — rebuilding
-  it properly is future work if more of these come in). Mirrored the
-  recommendation into the shared Person JSON-LD block as a `review` property
-  (author, reviewBody, datePublished) on all 9 pages for consistency with
-  how other Person-level facts (certs, knowsAbout) are kept in sync
-  site-wide, even though the visible quote only appears on `/about/`.
+- about: added, then removed per the user, a testimonial block (a LinkedIn
+  recommendation from Erin Dunn) and its matching Person JSON-LD `review`
+  property on all 9 pages. `/about/` and the shared JSON-LD are back to
+  their pre-testimonial state.
 - resume: reconciled the IT Support Specialist bullet's office count with the
   rest of the résumé — "33 office locations" &rarr; "29 offices" (same figure
   used everywhere else on the résumé and site now) — and dropped the
