@@ -4,6 +4,12 @@ Notable changes to the trenck.net site. Grouped by date, newest first.
 Format: [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
+- projects: added `homelab-public` as a 4th repo card — a new sanitized
+  public mirror of the homelab's Docker Compose stacks (domain/IP/email
+  redacted, hardening conventions and real Prometheus rules intact). The
+  "Homelab infrastructure-as-code" entry's heading now links to it directly;
+  its copy and JSON-LD updated to reflect that some of the homelab is now
+  public while the runbook/Ansible/config-snapshot repos stay private.
 - projects: the sysadmin-linux, sysadmin-windows, and trenck.net headings
   are now links straight to their GitHub repos (`link-underline`, opens in
   a new tab) — previously plain text, only reachable via the "View all
